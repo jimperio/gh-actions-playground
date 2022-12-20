@@ -14,5 +14,5 @@ jobs:
           fetch-depth: 0
       - run: |
           git checkout staging
-          git merge origin/master
-          git push origin staging
+          git reset --hard origin/master
+          git push origin staging --force

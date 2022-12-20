@@ -14,5 +14,7 @@ jobs:
           fetch-depth: 0
       - run: |
           git checkout staging
+          # Make `staging` identical to latest `origin/master`...
           git reset --hard origin/master
-          git push origin staging --force
+          # ...then force push it up to `origin/staging`.
+          git push --force origin staging
